@@ -21,7 +21,6 @@ export const addUserChallengeQuery = async (body) => {
 };
 
 export const fetchAllUserChallengesQuery = async (params) => {
-  // console.log('params', params);
   try {
     const queryString = fetchAllUserChallengesHelper(params);
     const data = await db.queryAsync(queryString);

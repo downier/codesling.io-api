@@ -18,7 +18,6 @@ export const addUserChallengeController = async (req, res) => {
 };
 
 export const fetchAllUserChallengesController = async (req, res) => {
-  // console.log('getch user challenges', req.params);
   try {
     const data = await fetchAllUserChallengesQuery(req.params);
     success('fetchAllUserChallengesController - successfully fetched all user challenges ', data);
