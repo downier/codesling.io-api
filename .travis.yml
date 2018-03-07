@@ -8,14 +8,15 @@ before_script:
   - psql -c 'create user root;' -U postgres
   - sleep 10
 script:
-  - yarn buildEnv
+  - yarn buildEnv &
   - sleep 10
-  - yarn setup:rest-server
+  - yarn setup:rest-server &
   - sleep 10
-  - yarn setup:socket-server
+  - yarn setup:socket-server &
   - sleep 10
-  - yarn setup:services/coderunner-service
+  - yarn setup:services/coderunner-service &
   - sleep 10
-  - yarn db:setup:rest-server
+  - yarn db:setup:rest-server &
   - sleep 10
-  - yarn start
+  - yarn start &
+  - sleep 10
