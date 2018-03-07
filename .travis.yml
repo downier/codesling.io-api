@@ -4,7 +4,7 @@ node_js:
 services:
   - postgresql
 before_script:
-  - psql -c 'create database codesling;' -U root
+  - psql -c 'create database travis_ci_test;' -U postgres
   - sleep 10
 script:
   - yarn buildEnv
