@@ -4,7 +4,7 @@ node_js:
 services:
   - postgresql
 before_script:
-  - psql -c 'create database travis_ci_test;' -U postgres
+  - psql -c 'create database codesling;' -U postgres
   - psql -c 'create user root;' -U postgres
   - sleep 10
 script:
